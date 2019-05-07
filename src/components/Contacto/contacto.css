@@ -1,0 +1,41 @@
+.form-container{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    color:rgb(60, 60, 60);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+form legend{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.input-field{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-radius: 5px;
+    border:solid 1px lightgray;
+}
+
+.btn{
+display: block;
+margin:auto;
+background-color: rgb(93, 209, 118);
+color:#fff;
+padding: 10px 30px;
+border:none;
+cursor: pointer;
+}

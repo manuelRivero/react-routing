@@ -1,0 +1,27 @@
+.nosotros-container{
+    width: 90%;
+    height: 500px;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    position: relative;
+    
+    background-color: #fff;
+}
+.nosotros-item{
+    margin: 0 20px;
+    padding: 1rem;
+    max-width: 50%;
+}
+.nosotros-container h2{
+    text-align: center;
+}
+.divider{
+    background: linear-gradient( red, transparent);
+    width: 15px;
+    height: 80%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+}

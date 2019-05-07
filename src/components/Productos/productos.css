@@ -1,0 +1,14 @@
+.productos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productos-container{
+    width: 95%;
+    margin: auto;
+}
+
+.productos-container h1{
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+.amarillo{
+    color:rgb(241, 221, 32);
+}
+.divider{
+    background: linear-gradient( #fff, transparent);
+    width: 5px;
+    height: 80%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+}
+footer{
+    margin-top: 20px;
+    display:flex;
+    height: 200px;
+    background-color: rgb(49, 30, 47);
+    color:white;
+    box-sizing: border-box;
+    position: relative;
+}
+footer .logo{
+    width: 150px;
+}
+footer h2{
+    margin:0;
+    font-weight: bold;
+}
+.icon{
+    
+    font-size: 30px;
+    margin:10px;
+}
+
+.footer-c-1, .footer-c-2{
+    display: flex;
+    max-width: 50%;
+    padding: 1rem;
+}
+
+
+.footer-item{
+    margin-left: 1rem;
+    width: 100%;
+}
