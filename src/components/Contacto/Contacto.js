@@ -4,7 +4,40 @@ import './contacto.css';
 export default () => {
   return (
     <div className="form-container">
-        <form>
+        <h1 className="flex-title">Ponte en contacto</h1>
+
+        
+        <div className="contact-menu">
+                <div className="contact-menu-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>DIRECCION</h3>
+                    <h5> lorem ipsum </h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+                <div className="contact-menu-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>TELEFONOS</h3>
+                    <h5> lorem ipsum </h5>
+                    <p>Lorem ipsum dolor sit amet </p>
+                    
+                    <h5> lorem ipsum </h5>
+                    <p>Lorem ipsum dolor sit amet </p>
+                </div>
+
+                <div className="contact-menu-item">
+                    <i class="far fa-comment-alt"></i>
+                    <h3>EMAIL</h3>
+                    <h5> lorem ipsum </h5>
+                    <p>Lorem ipsum dolor sit amet </p>
+                    
+                    <h5> lorem ipsum </h5>
+                    <p>Lorem ipsum dolor sit amet </p>
+                </div>
+
+            </div>
+      
+        <div className="contact-form">
+          <form>
             <legend>Envianos tu mensaje!</legend>
             <div className="input-field">
                 <label>Nombre: </label>
@@ -22,7 +55,9 @@ export default () => {
                 <button type="submit" className="btn">Enviar</button>
             </div>
         </form>
-      
+        </div>
+
+
     </div>
   )
 }

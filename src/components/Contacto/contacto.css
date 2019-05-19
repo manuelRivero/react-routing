@@ -1,13 +1,40 @@
 .form-container{
-    max-width: 600px;
-    background-color: #fff;
-    margin: auto;
-    padding: 1rem;
-    box-sizing: border-box;
-    color:rgb(60, 60, 60);
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top:50px;
 }
 
+.flex-title{
+    flex: 1 0 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-menu{
+    flex:1 0 100%;
+    display:flex;
+    justify-content: space-around;
+    min-height: 200px;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contact-menu-item{
+    flex:1 0 30%;
+    text-align: center;
+}
+.contact-form{
+    padding-top:50px;
+    background-color: #fff;
+    margin: auto;
+    box-sizing: border-box;
+    color:rgb(60, 60, 60);
+    flex: 0 1 100%;
+}
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+}
 form legend{
     text-align: center;
     font-size: 1.5em;
