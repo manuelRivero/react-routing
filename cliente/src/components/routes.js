@@ -29,37 +29,33 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <Nav></Nav>
         <div>
-          <Route path="/callback" render={(props) => {
-            handleAuthentication(props);
-            return <Callback {...props} /> 
-          }}/>
+            <Route path="/callback" render={(props) => {
+              handleAuthentication(props);
+              return <Callback {...props} /> 
+            } } />
 
-          <Route exact path="/"  render={ (props )=>( 
-              <Productos 
-                  auth ={auth} {...props} 
-                  productos={productos}
-               /> 
-            ) } />
+            <Route exact path="/"  render={ (props )=>( 
+                <Productos 
+                    auth ={auth} {...props}
+                /> 
+              ) } />
 
-                
+                  
             <Route exact path="/productos" render={ (props ) => (
-                  <Productos 
-                  auth ={auth} {...props} 
-                  productos={productos}
-                  /> 
-            ) } />
+                    <Productos 
+                    auth ={auth} {...props}
+                    /> 
+              ) } />
 
             <Route exact path="/producto/:productoid" render={ (props)=>{
                       let idProducto= props.location.pathname.replace('/producto/', '');
                       return(
                         <InfoProducto 
-                        auth ={auth} {...porps}
-                        producto={productos[idProducto]} 
+                        auth ={auth} {...props}
                         />
                       )
                     }
-                  } 
-                />
+                  } />
             <Route exact path="/nosotros" component={Nosotros} />
             <Route exact path="/contacto" component={Contacto} />
             <Route  component={NoFound} />

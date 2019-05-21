@@ -25,8 +25,9 @@ var jwtCheck = jwt({
     algorithms: ['RS256']
 });
 
+var checkScope = jwtAuthz(['read:productos'])
 
-app.get('/productos', (req, res)=>{
+app.get('/productos', jwtCheck, checkScope, (req, res)=>{
     let productos = [
         {
             "id" : 0,
@@ -88,7 +89,8 @@ app.get('/productos', (req, res)=>{
     res.json(productos);
 })
 app.get('/', (req, res)=>{
-    console.log(req)
+    res.write('<h1> hola mi eterno amor </h1>');
+    res.end();
 })
 app.listen(port, ()=> {
     console.log("servidor funcionando en el puerto :" + port);

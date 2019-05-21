@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import {makeMainRoutes} from './routes';
-import InfoProductos from '../datos/datos.json';
 
 
 class App extends Component {
@@ -11,7 +10,7 @@ class App extends Component {
   }
   componentWillMount(){
     this.setState({
-      productos: InfoProductos
+      productos: null
     })
   }
   render() {
