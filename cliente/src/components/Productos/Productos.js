@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import React, { Component } from 'react';
 import Producto from './Producto/Producto';
 import Buscador from './Buscador/Buscador';
@@ -11,27 +13,40 @@ export default class Productos extends Component {
   }
 
   getApiData = () => {
+    
+    const {getAccessToken} = this.props.auth,
+          headers = { 'Authorization' : `Bearer ${getAccessToken()}`},
+          url = 'http://localhost:8080/productos';
+    axios.get(url, {headers}).then(res => this.setState({ productos: res.data}))
+    
+    
 
   }
   componentWillMount(){
-    this.getApiData();
+    if(this.props.auth.getAccessToken() ) {
+      this.getApiData();
+    }
   }
 
   loginHandle = () => {
-    console.log(this.props.auth.login())
+    this.props.auth.login()
     
   }
 
-
   renderProductos = () =>{
-      return null//productos.map((producto, index) => (<Producto key={index} producto={producto} /> ))
+      
+      let content = this.state.productos ? 
+        this.state.productos.map((producto, index) => (<Producto key={index} producto={producto} /> )) :
+        <p>cargando</p>
+        return content;
+      
   }
 
   renderLoginBtn = () => {
     return (
       <div className=" contenedor-boton">
-          <p> Debes estar logeado para ver el contenido!</p>
-          <a className="boton" onClick={this.loginHandle}> Iniciar sesion</a>
+          <h2> Ingresa para disfrutar del mejor contenido!</h2>
+          <a className="login-btn" onClick={this.loginHandle}> Iniciar sesion</a>
       </div>
     )
   }
@@ -43,7 +58,6 @@ export default class Productos extends Component {
     return (
       <div className="productos-container">
             
-            <h1>Nuestros productos</h1>
               { isAuthenticated() &&
                 this.renderBuscador()
                 }
@@ -52,7 +66,9 @@ export default class Productos extends Component {
                 this.renderLoginBtn() :
                 this.renderProductos()
                 }
-
+              {
+                
+              }
             </div>
       </div>
     )

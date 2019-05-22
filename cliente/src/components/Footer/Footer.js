@@ -7,9 +7,9 @@ export default () => {
         <div className="footer-c-1 flex">
             <div className="footer-item">
             <h2> Lorem ipsum </h2>
-            <i class="fab fa-facebook icon"></i>
-            <i class="fab fa-instagram icon"></i>  
-            <i class="fab fa-twitter icon"></i>
+            <i className="fab fa-facebook icon"></i>
+            <i className="fab fa-instagram icon"></i>  
+            <i className="fab fa-twitter icon"></i>
             </div>
             <div className="footer-item">
             <h2> Lorem ipsum </h2>

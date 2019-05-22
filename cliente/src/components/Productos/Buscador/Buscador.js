@@ -11,7 +11,7 @@ export default class Buscador extends Component {
             
             <input className="buscador" type="text" placeholder="Encuentralo al toque..." onChange={this.handle}></input>
             <div className="icon-container">
-              <i class="fas fa-search icon"></i>
+              <i className="fas fa-search icon"></i>
             </div>
       </div>
     )
