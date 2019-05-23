@@ -8,6 +8,7 @@ import history from '../history';
 
 // Componentes Propios
 
+import Header from './Header/Header';
 import Nosotros from './Nosotros/Nosotros';
 import NoFound from './NoFound';
 import Productos from './Productos/Productos';
@@ -27,6 +28,7 @@ const handleAuthentication = ({location}) => {
 export const makeMainRoutes = () => {
   return (
       <Router history={history}>
+        <Header auth ={auth} />
         <Nav></Nav>
         <div>
             <Route path="/callback" render={(props) => {
