@@ -13,3 +13,30 @@ h1,h2,h3,h4{
   font-family: 'Lato', sans-serif;
 }
 
+
+.line-title{
+  border-bottom: solid 2px lightgray;
+  position: relative;
+  margin: 0 auto 60px auto;
+}
+.line-title h2{
+  position: absolute;
+  top: -2.2rem;
+  left:50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #fff;
+  padding: 0 2rem;
+}
+.contenido-container{
+  max-width: 1000px;
+  margin:auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.section-container{
+  padding: 1rem;
+    box-sizing: border-box;
+    margin: 50px auto;
+    position: relative;
+}

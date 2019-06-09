@@ -1,65 +1,29 @@
 .nosotros-container{
-    width: 90%;
-    height: 500px;
     padding: 1rem;
     box-sizing: border-box;
-    margin: auto;
-    display: flex;
+    margin: 50px auto;
     position: relative;
     
-    background-color: #fff;
-}
-.nosotros-item{
-    margin: 0 20px;
-    padding: 1rem;
-    max-width: 50%;
 }
 
-.divider{
-    background: linear-gradient( red, transparent);
-    width: 15px;
-    height: 80%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-
-}
-
-.text-1{
-    font-size: 30px;
-    font-weight: bold;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-.text-1 h1 {
-    margin: 0;
-}
-.text-2{ 
-}
-
-.nosotros-item .nosotros-sub-item{
+.nosotros-text{
     text-align: center;
+    margin-bottom: 50px;
 }
-
-.nosotros-item .nosotros-sub-item .icon {
-   
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: solid 3px black;
-    padding: 10px;
-    text-align: center;
+.nosotros-text p{
+    max-width: 700px;
     margin: auto;
 }
-
-.nosotros-item .nosotros-sub-item .fas{
-    display: block;
-    font-size: 25px;
-    
+.nosotros-list{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
-.title-fade{
-    background:red;
-    background: linear-gradient(to right,  rgba(240, 89, 217, 0.548), #fff 80%
-    );
-    padding: 0 10px;
+.nosotros-list .item{
+    flex: 0 1 calc(30% - 1rem);
+    border: solid 3px lightgray;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 2px;
 }

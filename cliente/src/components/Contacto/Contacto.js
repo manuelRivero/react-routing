@@ -3,11 +3,12 @@ import './contacto.css';
 
 export default () => {
   return (
-    <div className="form-container">
-        <h1 className="flex-title">Ponte en contacto</h1>
-
-        
-        <div className="contact-menu">
+    <div className="section-container">
+        <div className="contenido-container">
+            <div className="line-title flex-title">
+                <h2 className="">Ponte en contacto</h2>
+            </div>
+        <div className="contact-hero">
                 <div className="contact-menu-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>DIRECCION</h3>
@@ -35,8 +36,8 @@ export default () => {
                 </div>
 
             </div>
-      
-        <div className="contact-form">
+    </div>
+        <div className="contact-form contenido-container">
           <form>
             <legend>Envianos tu mensaje!</legend>
             <div className="input-field">
@@ -56,8 +57,6 @@ export default () => {
             </div>
         </form>
         </div>
-
-
     </div>
   )
 }
