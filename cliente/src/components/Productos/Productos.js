@@ -44,9 +44,9 @@ export default class Productos extends Component {
 
   renderLoginBtn = () => {
     return (
-      <div className=" contenedor-boton">
+      <div className=" productos-contenedor-login">
           <h2> Ingresa para disfrutar del mejor contenido!</h2>
-          <a className="login-btn" onClick={this.loginHandle}> Iniciar sesion</a>
+          <a className="productos-login-btn" onClick={this.loginHandle}> Iniciar sesion</a>
       </div>
     )
   }
