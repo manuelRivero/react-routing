@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300i|Roboto:300');
+html{
+  min-height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -39,4 +42,26 @@ h1,h2,h3,h4{
     box-sizing: border-box;
     margin: 50px auto;
     position: relative;
+}
+
+
+/* Animaciones */
+
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }

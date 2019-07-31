@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import './header.css'
 export default class Header extends Component {
 
-  
-
   logout = () => {
     this.props.auth.logout();
 
@@ -13,23 +11,30 @@ export default class Header extends Component {
     this.props.auth.login();
   }
 
-  renderLogBtn = () => {
-    let login = <a onClick = {this.login} className="log-btn">
-                  <i class="fas fa-sign-in-alt log-text"></i> login 
-                </a> ;
-    let logout = <a onClick = {this.logout} className="log-btn">
-                  <i class="fas fa-sign-in-alt log-text"></i> logout 
-                </a>
-    return !this.props.auth.isAuthenticated() ? login : logout ;
+  loginbtn = () => {
+    return(
+      <a onClick = {this.login} className="header-log-btn">
+         <i className="fas fa-sign-out-alt header-log-text"></i> login 
+      </a> 
+    )
   }
+    
+   logoutbtn = () => {
+     return (
+       <a onClick = {this.logout} className="header-log-btn">
+                  <i className="fas fa-sign-in-alt header-log-text"></i> logout 
+                </a>
+     )
+   }     
   render(){
+    const login =this.props.auth.isAuthenticated();
     return (
-      <header>
+      <header className="header">
         <React.Fragment>
-          <div className="head">
-                {this.renderLogBtn()}
+          <div className="header-top-bar">
+                { login ? this.logoutbtn(): this.loginbtn()}
           </div>
-          <div className="logo">
+          <div className="header-logo">
                 <img src="/img/logo.png" />
                 
           </div>

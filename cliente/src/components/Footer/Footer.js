@@ -4,7 +4,7 @@ import  './footer.css';
 export default () => {
   return (
     <footer className="footer">
-        <div className="footer-c-1 flex">
+        <div className="footer-c-1 ">
             <div className="footer-item">
             <h2> Lorem ipsum </h2>
             <i className="fab fa-facebook icon"></i>

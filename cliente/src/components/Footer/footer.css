@@ -3,19 +3,19 @@
 }
 .divider{
     background: linear-gradient( #fff, transparent);
-    width: 5px;
+    width: 3px;
     height: 80%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 
 }
 footer{
+    width: 100%;
     margin-top: 20px;
     display:flex;
     height: 200px;
     background-color: rgb(49, 30, 47);
     color:white;
-    box-sizing: border-box;
     position: relative;
 }
 footer .logo{
@@ -32,13 +32,21 @@ footer h2{
 }
 
 .footer-c-1, .footer-c-2{
+    flex: 0 1 calc(50% - 1rem);
+}
+.footer-c-1{
     display: flex;
-    max-width: 50%;
-    padding: 1rem;
+    justify-content: center;
 }
 
-
 .footer-item{
-    margin-left: 1rem;
-    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.footer-item:nth-child(1){
+    flex: 1 0 200px;
+    text-align: center;
+}
+.footer-item:nth-child(2){
+
 }

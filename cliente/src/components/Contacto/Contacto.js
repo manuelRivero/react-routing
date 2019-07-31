@@ -3,7 +3,7 @@ import './contacto.css';
 
 export default () => {
   return (
-    <div className="section-container">
+    <div className="section-container fadeIn">
         <div className="contenido-container">
             <div className="line-title flex-title">
                 <h2 className="">Ponte en contacto</h2>

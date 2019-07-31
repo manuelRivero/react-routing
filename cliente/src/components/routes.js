@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 
 // componentes del Auth
 import Callback from './Callback/Callback';
@@ -10,7 +10,7 @@ import history from '../history';
 
 import Header from './Header/Header';
 import Nosotros from './Nosotros/Nosotros';
-import NoFound from './NoFound';
+import NoFound from './NoFound/NoFound';
 import Productos from './Productos/Productos';
 import InfoProducto from './Productos/InfoProducto/InfoProducto';
 import Nav from './Nav/Nav';
@@ -30,7 +30,7 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <Header auth ={auth} />
         <Nav></Nav>
-        <div>
+        <Switch>
             <Route path="/callback" render={(props) => {
               handleAuthentication(props);
               return <Callback {...props} /> 
@@ -59,9 +59,9 @@ export const makeMainRoutes = () => {
                     }
                   } />
             <Route exact path="/nosotros" component={Nosotros} />
-            <Route exact path="/contacto" component={Contacto} />
+            <Route exact={true}path="/contacto" component={Contacto} />
             <Route  component={NoFound} />
-        </div>
+          </Switch>
 
       <Footer></Footer> 
       </Router>
