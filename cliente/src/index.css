@@ -38,7 +38,9 @@ h1,h2,h3,h4{
   box-sizing: border-box;
 }
 .section-container{
-  padding: 1rem;
+  
+    min-height: 50vh;
+    padding: 1rem;
     box-sizing: border-box;
     margin: 50px auto;
     position: relative;
