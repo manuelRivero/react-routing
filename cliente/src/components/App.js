@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {makeMainRoutes} from './routes';
+import MainRoutes from './routes';
+import Footer from './Footer/Footer';
+
 
 
 class App extends Component {
@@ -14,9 +16,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
-          
-          {makeMainRoutes()}
+      <div className="app">
+          <MainRoutes />
+          <Footer></Footer> 
       </div>
     );
   }

@@ -15,7 +15,10 @@ import Productos from './Productos/Productos';
 import InfoProducto from './Productos/InfoProducto/InfoProducto';
 import Nav from './Nav/Nav';
 import Contacto from './Contacto/Contacto';
-import Footer from './Footer/Footer';
+
+// css
+
+import './routes.css';
 
 const auth = new Auth();
 
@@ -25,8 +28,9 @@ const handleAuthentication = ({location}) => {
   }
 }
 
-export const makeMainRoutes = () => {
+export default () => {
   return (
+    <div className="routes">
       <Router history={history}>
         <Header auth ={auth} />
         <Nav></Nav>
@@ -62,8 +66,10 @@ export const makeMainRoutes = () => {
             <Route exact={true}path="/contacto" component={Contacto} />
             <Route  component={NoFound} />
           </Switch>
-
-      <Footer></Footer> 
       </Router>
+      
+    </div>
+      
+      
   );
 }
