@@ -17,10 +17,14 @@ export default class Productos extends Component {
     const {getAccessToken} = this.props.auth,
           headers = { 'Authorization' : `Bearer ${getAccessToken()}`},
           url = 'http://localhost:8080/productos';
-    axios.get(url, {headers}).then(res => this.setState({ productos: res.data}))
+    axios.get(url, {headers}).then(res => this.setState((st)=>{
+      this.props.handlerproducts(res.data)
+      return({
+         productos: res.data
+      })
+    }))
     
     
-
   }
   componentWillMount(){
     if(this.props.auth.getAccessToken() ) {

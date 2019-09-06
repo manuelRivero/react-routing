@@ -28,7 +28,27 @@ const handleAuthentication = ({location}) => {
   }
 }
 
-export default () => {
+
+export default class extends React.Component {
+  constructor(){
+    super()
+    this.state={
+      productos:[]
+    }
+    this.handlerproducts = this.handlerproducts.bind(this)
+  }
+
+  
+  handlerproducts(productos){
+      this.setState((st)=>{
+        return ({
+          productos
+        })
+      })
+  }
+  render(){
+
+    
   return (
     <div className="routes">
       <Router history={history}>
@@ -49,15 +69,18 @@ export default () => {
                   
             <Route exact path="/productos" render={ (props ) => (
                     <Productos 
-                    auth ={auth} {...props}
+                    auth ={auth}
+                    {...props}
+                    handlerproducts={this.handlerproducts}
                     /> 
               ) } />
 
             <Route exact path="/producto/:productoid" render={ (props)=>{
-                      let idProducto= props.location.pathname.replace('/producto/', '');
+                      let idProducto= props.match.params.productoid;
                       return(
                         <InfoProducto 
-                        auth ={auth} {...props}
+                        auth ={auth} {...props} producto={this.state.productos[idProducto]}
+
                         />
                       )
                     }
@@ -72,4 +95,5 @@ export default () => {
       
       
   );
+  }
 }
