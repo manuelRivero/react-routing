@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import './InfoProducto.css';
 
 export default class InfoProductos extends Component {
   
+  renderLoginBtn = () => {
+    return (
+      <div className=" productos-contenedor-login">
+          <h2> Ingresa para disfrutar del mejor contenido!</h2>
+          <a className="productos-login-btn" onClick={this.loginHandle}> Iniciar sesion</a>
+      </div>
+    )
+  }
+
   renderinfo(){
     const {imagen, nombre, precio, descripcion} = this.props.producto 
     return(
@@ -21,10 +31,22 @@ export default class InfoProductos extends Component {
         </div>
     )
   }
+
+  renderProductoDesconocido(){
+    return (
+      <div className=" productos-contenedor-login">
+          <h2>Parece que este producto no esta disponible en este momento!</h2>
+          <p>haz click en volver para ver nuestras ofertas.</p>
+          <Link className="productos-login-btn" to="/">Volver</Link>
+      </div>
+    )
+  }
   render() {
-      
+    
       return (
-        this.props.producto ? this.renderinfo() : <p>mal</p>
+        <div className="container">
+          {!this.props.auth.isAuthenticated() ? this.renderLoginBtn() : (this.props.producto ? this.renderinfo() : this.renderProductoDesconocido())}
+        </div>
       )
     }
 }

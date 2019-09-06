@@ -62,7 +62,9 @@ export default class extends React.Component {
 
             <Route exact path="/"  render={ (props )=>( 
                 <Productos 
-                    auth ={auth} {...props}
+                    auth ={auth}
+                    {...props}
+                    handlerproducts={this.handlerproducts}
                 /> 
               ) } />
 
