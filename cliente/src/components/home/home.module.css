@@ -1,0 +1,27 @@
+.Home{
+width: 100%;
+ background-image: url('https://c1.staticflickr.com/1/698/22706092457_f04a1e8f66_b.jpg');
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ position: relative;
+}
+
+.Card{
+    width: 90%;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    color:#fff;
+    background: rgba(0, 0, 0, .2);
+}
+
+
+@media (min-width: 600px){
+    .Card{
+        width: 500px;
+    }
+}

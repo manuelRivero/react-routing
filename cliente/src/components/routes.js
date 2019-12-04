@@ -15,6 +15,7 @@ import Productos from './Productos/Productos';
 import InfoProducto from './Productos/InfoProducto/InfoProducto';
 import Nav from './Nav/Nav';
 import Contacto from './Contacto/Contacto';
+import Home from './home/home';
 
 // css
 
@@ -61,10 +62,9 @@ export default class extends React.Component {
             } } />
 
             <Route exact path="/"  render={ (props )=>( 
-                <Productos 
+                <Home
                     auth ={auth}
                     {...props}
-                    handlerproducts={this.handlerproducts}
                 /> 
               ) } />
 
