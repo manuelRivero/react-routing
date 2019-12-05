@@ -5,23 +5,58 @@ width: 100%;
  background-position: center center;
  background-repeat: no-repeat;
  position: relative;
+ z-index:-1;
+ 
+
 }
 
+.Gradient{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background:linear-gradient( to top, rgba(0,0,0,.4) , transparent )
+}
 .Card{
     width: 90%;
     margin: auto;
-    background-color: transparent;
     border-radius: 5px;
     padding: 1rem;
     box-sizing: border-box;
     text-align: center;
+    z-index: 200;
     color:#fff;
-    background: rgba(0, 0, 0, .2);
 }
 
-
-@media (min-width: 600px){
-    .Card{
-        width: 500px;
-    }
+.Card h1{
+    font-size: 5rem;
 }
+
+.Card p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Card button{
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+    border-radius: 5px;
+    border: solid 2px #fff;
+    color:#fff;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.Card button:hover{
+    
+    cursor: pointer !important;
+}
+
+.StartBtn{
+    background-color:rgba(155, 41, 138) !important;
+        border-color: rgba(155, 41, 138) !important;
+}
+
