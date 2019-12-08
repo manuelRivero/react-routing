@@ -58,6 +58,7 @@ export default class Productos extends Component {
     return ( <Buscador className=""></Buscador> )
   }
   render() {
+    
     const { isAuthenticated } = this.props.auth;
     return (
       <div className="section-container fadeIn">

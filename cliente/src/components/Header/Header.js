@@ -1,14 +1,20 @@
 import React, {Component} from 'react';
 import './header.css'
-export default class Header extends Component {
 
+import {withRouter} from 'react-router-dom'
+
+ class Header extends Component {
+
+  state={
+    isLogin:false
+  }
   logout = () => {
     this.props.auth.logout();
 
   }
 
   login = () => {
-    this.props.auth.login();
+    this.props.auth.login()
   }
 
   loginbtn = () => {
@@ -26,16 +32,25 @@ export default class Header extends Component {
                 </a>
      )
    }     
+
+   componentDidMount(){
+     const loginState = this.props.auth.isAuthenticated()
+     this.setState({isLogin: loginState})
+   }
+
+  
   render(){
-    const login =this.props.auth.isAuthenticated();
+    
+    const { isAuthenticated } = this.props.auth;
+    
     return (
       <header className="header">
         <React.Fragment>
           <div className="header-top-bar">
-                { login ? this.logoutbtn(): this.loginbtn()}
+                { isAuthenticated() ? this.logoutbtn(): this.loginbtn()}
           </div>
           <div className="header-logo">
-                <img src="/img/logo.png" />
+                <img src="/img/logo.png" alt="logo"/>
                 
           </div>
         </React.Fragment>
@@ -44,3 +59,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default withRouter(Header)

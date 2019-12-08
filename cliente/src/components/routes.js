@@ -48,12 +48,12 @@ export default class extends React.Component {
       })
   }
   render(){
-
     
   return (
+   
     <div className="routes">
       <Router history={history}>
-        <Header auth ={auth} />
+        <Header  auth={auth} />
         <Nav></Nav>
         <Switch>
             <Route path="/callback" render={(props) => {

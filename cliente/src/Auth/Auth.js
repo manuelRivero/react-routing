@@ -86,9 +86,10 @@ export default class Auth {
     localStorage.removeItem('idToken');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('expiresAt');
+
     this.auth0.logout({
-      returnTo: window.location.origin
-    });
+          returnTo: window.location.origin
+        });
 
     // navigate to the home route
     history.replace('/productos');
