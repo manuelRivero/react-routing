@@ -2,9 +2,10 @@
   "name": "routing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://manuelRivero.github.io/react-routing",
   "dependencies": {
     "auth0-js": "^9.10.2",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "history": "^4.9.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
@@ -12,6 +13,8 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,6 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "react-router-dom": "^5.0.0"
   }
 }

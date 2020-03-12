@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route, Router, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 // componentes del Auth
 import Callback from './Callback/Callback';
 import Auth from '../Auth/Auth';
-import history from '../history';
 
 // Componentes Propios
 
@@ -52,7 +51,7 @@ export default class extends React.Component {
   return (
    
     <div className="routes">
-      <Router history={history}>
+      <BrowserRouter basename="/react-routing">
         <Header  auth={auth} />
         <Nav></Nav>
         <Switch>
@@ -91,7 +90,7 @@ export default class extends React.Component {
             <Route exact={true}path="/contacto" component={Contacto} />
             <Route  component={NoFound} />
           </Switch>
-      </Router>
+      </BrowserRouter>
       
     </div>
       

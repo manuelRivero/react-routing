@@ -1,4 +1,6 @@
 import React from 'react';
+import  logo from './../../assets/logo.png';
+
 import  './footer.css';
 
 export default () => {
@@ -21,7 +23,7 @@ export default () => {
         <div className="footer-c-2">
             <span className="divider"></span>
             <div className="footer-item ">
-            <img className="logo" src="./img/logo.png" />
+            <img className="logo" src={logo} alt="logo"/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum sed justo non vulputate.
                     Pellentesque condimentum, justo a pulvinar interdum, diam justo vestibulum quam, et blandit sapien mi vitae nisl.
                     Etiam vel dignissim nulla, et condimentum dolor. In sagittis semper risus ut laoreet. Phasellus ac aliquet justo

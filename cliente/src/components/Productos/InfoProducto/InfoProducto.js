@@ -9,7 +9,7 @@ export default class InfoProductos extends Component {
     return (
       <div className=" productos-contenedor-login">
           <h2> Ingresa para disfrutar del mejor contenido!</h2>
-          <a className="productos-login-btn" onClick={this.loginHandle}> Iniciar sesion</a>
+          <button className="productos-login-btn" onClick={this.loginHandle} > Iniciar sesion</button>
       </div>
     )
   }

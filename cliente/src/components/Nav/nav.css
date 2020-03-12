@@ -17,6 +17,7 @@
     font-weight: bold;
     transition: all .2s;
     position: relative;
+    color :rgba(105, 26, 93, 0.548)
 }
 .link:after{
     position: absolute;
