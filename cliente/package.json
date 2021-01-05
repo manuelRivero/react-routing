@@ -5,7 +5,7 @@
   "homepage": "http://manuelRivero.github.io/react-routing",
   "dependencies": {
     "auth0-js": "^9.10.2",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "history": "^4.9.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
